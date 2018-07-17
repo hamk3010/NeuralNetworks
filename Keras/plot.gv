@@ -1,0 +1,18 @@
+digraph plot {
+	"Tweets input" [label="Tweets input" fillcolor="#8dd3c7" fixedsize=true height=0.8034 shape=oval style=filled width=1.3]
+	"GloVe 
+ Embeddings" [label="GloVe 
+ Embeddings" fillcolor="#fccde5" fixedsize=true height=0.8034 shape=box style=filled width=1.3]
+	Flatten [label=Flatten fillcolor="#fdb462" fixedsize=true height=0.8034 shape=box style=filled width=1.3]
+	"ReLU 
+ (32 neurons)" [label="Activation\nrelu" fillcolor="#ffffb3" fixedsize=true height=0.8034 shape=box style=filled width=1.3]
+	Sigmoid [label=Sigmoid fillcolor="#fccde5" fixedsize=true height=0.8034 shape=box style=filled width=1.3]
+	"GloVe 
+ Embeddings" -> "Tweets input" [arrowtail=open dir=back]
+	Flatten -> "GloVe 
+ Embeddings" [arrowtail=open dir=back]
+	"ReLU 
+ (32 neurons)" -> Flatten [arrowtail=open dir=back]
+	Sigmoid -> "ReLU 
+ (32 neurons)" [arrowtail=open dir=back]
+}
